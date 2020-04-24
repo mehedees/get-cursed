@@ -20,7 +20,7 @@ class Curse:
             'language': r[1],
             'curse': r[3]
         },
-            ensure_ascii=False)
+            ensure_ascii=False).encode('utf8').decode()
         resp.status = falcon.HTTP_200
 
 
