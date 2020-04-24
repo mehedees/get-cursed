@@ -15,7 +15,7 @@ for root, _, files in os.walk(collections_path):
 query = '''INSERT INTO bad_lang (lang_code, word) VALUES '''
 
 for l in word_list:
-    query += "('{}', '{}'),".format(l[0], l[1])
+    query += (str(l) + ',')
 
 query = query[:-1]
 print(query)
