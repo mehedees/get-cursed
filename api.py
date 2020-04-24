@@ -7,6 +7,7 @@ api = application = falcon.API()
 
 class Curse:
     def on_get(self, req, resp):
+        query = ''
         if db_type == 'mysql':
             query = '''SELECT * FROM bad_lang ORDER BY RAND() LIMIT 1'''
         elif db_type == 'sqlite':
