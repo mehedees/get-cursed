@@ -18,6 +18,7 @@ class Curse:
         print(r)
         resp.body = json.dumps({
             'hey': r[3],
+            'translate': 'https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={}'.format(r[3]),
             'language': r[1],
         },
             ensure_ascii=False).encode('utf8').decode()
