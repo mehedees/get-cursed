@@ -17,8 +17,8 @@ class Curse:
 
         print(r)
         resp.body = json.dumps({
+            'hey': r[3],
             'language': r[1],
-            'curse': r[3]
         },
             ensure_ascii=False).encode('utf8').decode()
         resp.status = falcon.HTTP_200
