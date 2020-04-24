@@ -14,7 +14,6 @@ class Curse:
             query = '''SELECT * FROM bad_lang ORDER BY RANDOM() LIMIT 1'''
         c.execute(query)
         r = c.fetchone()
-        mydb.close()
 
         print(r)
         resp.body = json.dumps({
